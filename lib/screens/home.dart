@@ -1,5 +1,7 @@
+import 'package:ase456_group_project/screens/scientific_calculator.dart';
 import 'package:flutter/material.dart';
 import 'package:ase456_group_project/screens/simple.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -24,7 +26,7 @@ class _HomePageState extends State<Home> {
       appBar: AppBar(
         title: const Text(''),
       ),
-      body: [Simple(), Item2()][tab],
+      body: [Simple(), ScientificCalculator() ][tab],
       drawer: Drawer(
         child: ListView(
           children: [
@@ -37,7 +39,7 @@ class _HomePageState extends State<Home> {
             ),
             ListTile(
               leading: const Icon(Icons.arrow_right),
-              title: const Text("Item 2"),
+              title: const Text("Scientific Calculator"),
               onTap: () {
                 selectItem(1);
               },
